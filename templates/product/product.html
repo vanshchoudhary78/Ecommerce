@@ -11,11 +11,11 @@
             <aside class="col-md-6">
     <article class="gallery-wrap"> 
     <div class="img-big-wrap">
-      <div> <a href="#"><img src="/media/{{product.product_images.first.image}}"></a></div>
+      <div> <img id="main-image" src="/media/{{product.product_images.first.image}}"></div>
     </div> <!-- slider-product.// -->
     <div class="thumbs-wrap">
       {% for image in product.product_images.all %}
-      <a href="#" class="item-thumb"> <img src="/media/{{image.image}}"></a>
+      <a href="#" class="item-thumb" onclick="changeMainImage('/media/{{image.image}}'); return false;"> <img src="/media/{{image.image}}"></a>
       
       {% endfor %}
 
@@ -107,7 +107,7 @@
         </div> <!-- row.// -->
     
         <a href="#" class="btn  btn-primary"> Buy now </a>
-        <a href="{%url 'add_to_cart' product.uid %}?variant={{select_size}}" class="btn  btn-outline-primary"> <span class="text">Add to cart</span> <i class="fas fa-shopping-cart"></i>  </a>
+        <a href="{%url 'add_to_cart' product.slug %}?variant={{select_size}}" class="btn  btn-outline-primary"> <span class="text">Add to cart</span> <i class="fas fa-shopping-cart"></i>  </a>
     </article> <!-- product-info-aside .// -->
             </main> <!-- col.// -->
         </div> <!-- row.// -->
@@ -121,7 +121,10 @@
     <script>
       function get_correct_price(size){
         window.location.href = window.location.pathname + '?size=${size}'
-
+      }
+      
+      function changeMainImage(imageSrc) {
+        document.getElementById('main-image').src = imageSrc;
       }
     </script>
 

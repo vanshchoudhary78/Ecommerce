@@ -1,6 +1,6 @@
 from cmath import log
 from tkinter import E
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate , login , logout
@@ -82,10 +82,10 @@ def activate_email(request , email_token):
     
 
 
+@login_required(login_url='/accounts/login/')
 def add_to_cart(request, slug):
     variant = request.GET.get('variant')
-    product_obj = Product.objects.get(slug=slug)
-    # product_obj = get_object_or_404(Product, slug=slug)
+    product_obj = get_object_or_404(Product, slug=slug)
     user = request.user
     cart_obj, _ = Cart.objects.get_or_create(user=user, is_paid=False)
     cart_item = CartItems.objects.create(cart=cart_obj, product=product_obj)

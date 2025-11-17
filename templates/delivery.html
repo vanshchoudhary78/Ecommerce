@@ -1,0 +1,128 @@
+{% extends "base/base.html" %}
+
+{% block start %}
+
+<section class="section-content padding-y bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="mb-4">Delivery Information</h2>
+                <p class="lead">We strive to deliver your orders as quickly and efficiently as possible. Below, you'll find details on our shipping options, delivery times, and policies.</p>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Shipping Options</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li><strong>Standard Shipping:</strong> 5-7 business days - Free on orders over $50</li>
+                            <li><strong>Express Shipping:</strong> 2-3 business days - $10 additional fee</li>
+                            <li><strong>Overnight Shipping:</strong> 1 business day - $20 additional fee</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Delivery Areas</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>We deliver to:</p>
+                        <ul>
+                            <li>Russia</li>
+                            <li>USA</li>
+                            <li>Europe</li>
+                        </ul>
+                        <p>For international orders outside these areas, please contact us for availability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Delivery Policies</h5>
+                    </div>
+                    <div class="card-body">
+                        <h6>Order Processing</h6>
+                        <p>Orders are processed within 1-2 business days after payment confirmation.</p>
+
+                        <h6>Tracking</h6>
+                        <p>You will receive a tracking number via email once your order ships.</p>
+
+                        <h6>Delivery Issues</h6>
+                        <p>If you encounter any issues with delivery, please contact our customer service at +91812345678.</p>
+
+                        <h6>Returns</h6>
+                        <p>Items can be returned within 30 days of delivery. See our return policy for details.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Frequently Asked Questions</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="accordion" id="deliveryAccordion">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            How long does delivery take?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#deliveryAccordion">
+                                    <div class="card-body">
+                                        Delivery times vary based on your location and shipping method chosen. Standard shipping takes 5-7 business days, express 2-3 days, and overnight 1 day.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Do you offer free shipping?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#deliveryAccordion">
+                                    <div class="card-body">
+                                        Yes, we offer free standard shipping on orders over $50.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            What if my package is damaged?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#deliveryAccordion">
+                                    <div class="card-body">
+                                        If your package arrives damaged, please contact us immediately with photos of the damage, and we'll arrange for a replacement or refund.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
