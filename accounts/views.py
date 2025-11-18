@@ -1,5 +1,5 @@
 from cmath import log
-from tkinter import E
+
 from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.models import User
@@ -7,13 +7,11 @@ from django.contrib.auth import authenticate , login , logout
 from django.http import HttpResponseRedirect,HttpResponse
 from django.contrib.auth.decorators import login_required
 
-# Create your views here.
+
 from .models import Profile
 from product.models import *
-from accounts.models import Cart, CartItems  # Make sure these are imported
+from accounts.models import Cart, CartItems  
 from product.models import Product
-
-# from django.shortcuts import get_object_or_404
 
 def login_page(request):
     
